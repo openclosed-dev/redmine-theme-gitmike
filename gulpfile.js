@@ -5,7 +5,7 @@ var gulpSass = require('gulp-sass');
 var gulpAutoPrefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 
-gulpSass.compiler = require('node-sass');
+gulpSass = gulpSass(require('sass'));
 
 function sass(env) {
   var nodeSassOption = {
