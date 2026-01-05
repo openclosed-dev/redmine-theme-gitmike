@@ -1,4 +1,4 @@
-@import url(../../../stylesheets/application.css);
+@import url(../../application.css);
 /*!
  * gitmike
  * This is github-like theme for Redmine.
@@ -27,7 +27,7 @@ tt, code, pre {
 }
 
 #header {
-  background-color: #fafafa;
+  background: #fafafa;
   border-bottom: 1px solid #eee;
   padding: 4px 8px 10px 6px;
   height: auto;
@@ -1201,7 +1201,7 @@ a.buy-button.blue {
   }
   div#content > h2,
   div#content h2.contacts_header {
-    background-color: #fafafa;
+    background: #fafafa;
     border-bottom: 1px solid #eee;
   }
 }
