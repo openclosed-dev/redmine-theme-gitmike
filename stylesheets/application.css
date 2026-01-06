@@ -143,7 +143,7 @@ div#content > h2, div#content h2.contacts_header {
   padding: 8px 20px;
   margin: -10px -16px 10px;
 }
-div#content > h2.inline-flex, div#content h2.contacts_header.inline-flex {
+div#content > h2.inline-block, div#content h2.contacts_header.inline-block {
   border: none;
   background: none;
   margin: -10px -8px 10px -16px;

@@ -148,7 +148,7 @@ div#content {
     border-top-right-radius: 4px;
     padding: 8px 20px;
     margin: $negative-margin-on-content;
-    &.inline-flex {
+    &.inline-block {
       border: none;
       background: none;
       // negative mgrgin for parent (#content)
