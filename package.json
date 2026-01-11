@@ -2,6 +2,7 @@
   "name": "gitmike",
   "version": "1.2.1",
   "description": "Redmine gitmike theme",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git://github.com/makotokw/redmine-theme-gitmike.git"
@@ -16,7 +17,7 @@
     "browser-sync": "^3.0.4",
     "github-markdown-css": "^5.8.1",
     "gulp": "^5.0.1",
-    "gulp-autoprefixer": "^8.0.0",
+    "gulp-autoprefixer": "^10.0.0",
     "gulp-sass": "^6.0.1",
     "sass": "^1.97.1"
   },
