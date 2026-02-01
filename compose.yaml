@@ -19,10 +19,5 @@ services:
         source: .
         target: /usr/src/redmine/themes/gitmike
         read_only: true
-      - type: volume
-        source: empty
-        target: /usr/src/redmine/themes/gitmike/node_modules
     depends_on:
       - postgres
-volumes:
-  empty:

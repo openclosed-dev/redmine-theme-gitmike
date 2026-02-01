@@ -8,3 +8,8 @@ services:
         source: .
         target: /workspaces/redmine-theme-gitmike
         consistency: cached
+      - type: volume
+        source: node_modules
+        target: /workspaces/redmine-theme-gitmike/node_modules
+volumes:
+  node_modules:
