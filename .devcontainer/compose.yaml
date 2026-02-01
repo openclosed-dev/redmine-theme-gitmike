@@ -1,0 +1,10 @@
+services:
+  devcontainer:
+    build:
+      context: .devcontainer
+    command: sleep infinity
+    volumes:
+      - type: bind
+        source: .
+        target: /workspaces/redmine-theme-gitmike
+        consistency: cached
