@@ -6,11 +6,6 @@ RUN apt-get update \
 
 RUN mkdir /workspaces
 
-USER node
-
-RUN mkdir /home/node/.npm-global
-RUN npm config set prefix '/home/node/.npm-global'
-
-ENV PATH=/home/node/.npm-global/bin:$PATH
-
 RUN npm install -g gulp-cli
+
+USER node
