@@ -1,8 +1,9 @@
 FROM node:24-trixie
 
-RUN apt-get update \
-  && export DEBIAN_FRONTEND=noninteractive \
-  && apt-get install -y --no-install-recommends git openssh-client
+RUN DEBIAN_FRONTEND=noninteractive apt-get update \
+  && apt-get install -y --no-install-recommends \
+    git \
+    openssh-client
 
 RUN mkdir /workspaces && chown node:node /workspaces
 

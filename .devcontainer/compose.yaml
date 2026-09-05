@@ -1,15 +1,37 @@
 services:
   devcontainer:
     build:
-      context: .devcontainer
+      context: .
     command: sleep infinity
     volumes:
-      - type: bind
-        source: .
-        target: /workspaces/redmine-theme-gitmike
-        consistency: cached
-      - type: volume
-        source: node_modules
-        target: /workspaces/redmine-theme-gitmike/node_modules
+    - type: bind
+      source: ..
+      target: /workspaces/redmine-theme-gitmike
+      consistency: cached
+    - type: volume
+      source: node-modules
+      target: /workspaces/redmine-theme-gitmike/node_modules
+  postgres:
+    image: postgres:18.1
+    environment:
+    - POSTGRES_USER=redmine
+    - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    - POSTGRES_DB=redmine
+  redmine:
+    image: redmine:6.0.7
+    ports:
+    - 8080:3000
+    environment:
+      REDMINE_DB_POSTGRES: postgres
+      REDMINE_DB_USERNAME: redmine
+      REDMINE_DB_PASSWORD: ${POSTGRES_PASSWORD}
+      REDMINE_DB_DATABASE: redmine
+    volumes:
+    - type: bind
+      source: ..
+      target: /usr/src/redmine/themes/gitmike
+      read_only: true
+    depends_on:
+    - postgres
 volumes:
-  node_modules:
+  node-modules:

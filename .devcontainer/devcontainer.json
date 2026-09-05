@@ -1,7 +1,6 @@
 {
   "name": "${localWorkspaceFolderBasename}",
   "dockerComposeFile": [
-    "../compose.yaml",
     "compose.yaml"
   ],
   "service": "devcontainer",
@@ -12,8 +11,7 @@
     "vscode": {
       "extensions": [
         "editorconfig.editorconfig",
-        "streetsidesoftware.code-spell-checker",
-        "ms-azuretools.vscode-docker"
+        "streetsidesoftware.code-spell-checker"
       ]
     }
   },
